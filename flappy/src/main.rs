@@ -149,8 +149,7 @@ impl State {
             );
         }
         if self.player.y > SCREEN_HEIGHT ||
-            self.obstacle.hit_obstacle(&self.player)
-        {
+            self.obstacle.hit_obstacle(&self.player) {
             self.mode = GameMode::End;
         }
     }
@@ -194,7 +193,6 @@ impl State {
         }
     }
 }
-
 
 impl GameState for State {
    fn tick(&mut self, ctx: &mut BTerm) {
